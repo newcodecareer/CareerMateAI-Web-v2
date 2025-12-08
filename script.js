@@ -1,0 +1,1 @@
+console.log('CareerMate AI Landing Page loaded successfully! 🚀');
