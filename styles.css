@@ -205,6 +205,15 @@ body {
     align-items: center;
 }
 
+.hero-icon {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    z-index: 1;
+    animation: float 3s ease-in-out infinite;
+}
+
 .btn-hero-primary {
     background: linear-gradient(135deg, #667EEA 0%, #4285F4 100%);
     color: white;
