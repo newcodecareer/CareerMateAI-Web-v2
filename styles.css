@@ -299,3 +299,91 @@ body {
 .footer-links a:hover {
     color: #4285F4;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header .container {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .nav {
+        order: 3;
+        width: 100%;
+        /* margin-top: 15px; */
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .header-actions {
+        gap: 10px;
+    }
+
+    .btn-signin {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+
+    .btn-start {
+        padding: 8px 18px;
+        font-size: 13px
+    }
+
+    .hero {
+        padding: 100px 0 60px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+        padding: 20px 30px;
+    }
+
+    .hero h1::before {
+        border-radius: 20px
+    }
+
+    .hero-subtitle {
+        font-size: 16px
+    }
+
+    .hero-subtitle br {
+        display: none;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .btn-hero-primary,
+    .btn-hero-secondary {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+
+    .hero-icon {
+        display: none;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+    }
+
+    .footer-left {
+        align-items: center;
+    }
+
+    .footer-links {
+        gap: 25px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-links a {
+        font-size: 14px;
+    }
+}
