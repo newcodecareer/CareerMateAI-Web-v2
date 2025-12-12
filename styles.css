@@ -1,132 +1,137 @@
 /* for teaching reference */
 :root {
-    /* color */
-    --primary-grey: #333;
+  /* color */
+  --primary-grey: #333;
 
-    /* width */
-    --container-max-width: 1200px;
+  --primary-blue: #4285f4;
 
-    /* gap */
-    --gap-5-l8: 40px;
-    --gap-5-l5: 25px;
-    --gap-5-l3: 15px;
-    --gap-5-l2: 10px;
+  /* width */
+  --container-max-width: 1200px;
 
-    --gap-4-l3: 12px;
-    --gap-4-l2: 8px;
+  /* gap */
+  --gap-5-l8: 40px;
+  --gap-5-l5: 25px;
+  --gap-5-l3: 15px;
+  --gap-5-l2: 10px;
+
+  --gap-4-l3: 12px;
+  --gap-4-l2: 8px;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-    line-height: 1.6;
-    color: var(--primary-grey);
-    overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", sans-serif;
+  line-height: 1.6;
+  color: var(--primary-grey);
+  overflow-x: hidden;
 }
 
+/* TODO is this for global viable? Q2, 46line, no effect?*/
 .container {
-    max-width: var(--container-max-width);
-    margin: 0 auto;
-    padding: 0 20px;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* Header */
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    z-index: 1000;
-    padding: 15px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+  padding: 15px 0;
 }
 
 .header .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 700;
-    font-size: 18px;
-    color: var(--primary-grey);
-    flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--primary-grey);
+  flex-shrink: 0;
 }
 
 .nav {
-    display: flex;
-    gap: 40px;
-    flex: 1;
-    justify-content: center;
+  display: flex;
+  gap: 40px;
+  flex: 1;
+  justify-content: center;
 }
 
 .nav a {
-    text-decoration: none;
-    color: var(--primary-grey);
-    font-weight: 500;
-    transition: color 0.3s;
-    font-size: 15px;
+  text-decoration: none;
+  color: var(--primary-grey);
+  font-weight: 500;
+  transition: color 0.3s;
+  font-size: 15px;
 }
 
 .nav a:hover {
-    color: #4285F4;
+  color: var(--primary-blue);
 }
 
 .header-actions {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-shrink: 0;
 }
 
 .btn-signin {
-    background: none;
-    border: none;
-    color: var(--primary-grey);
-    font-weight: 500;
-    font-size: 15px;
-    cursor: pointer;
-    padding: 8px 16px;
-    transition: color 0.3s;
+  background: none;
+  border: none;
+  color: var(--primary-grey);
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 8px 16px;
+  transition: color 0.3s;
 }
 
 .btn-signin:hover {
-    color: #4285F4;
+  color: var(--primary-blue);
 }
 
 .btn-start {
-    background: #1a1a1a;
-    color: white;
-    border: none;
-    padding: 10px 24px;
-    border-radius: 8px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s;
-    font-size: 14px;
+  background: #1a1a1a;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 14px;
 }
 
 .btn-start:hover {
-    background: var(--primary-grey);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background: var(--primary-grey);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Buttons */
-.btn-primary {
-    background: #4285F4;
+/* look like these code are useless, TODO show us reuseable component? */
+/* .btn-primary {
+    background: var(--primary-blue);
     color: white;
     border: none;
     padding: 10px 24px;
@@ -145,8 +150,8 @@ body {
 
 .btn-secondary {
     background: white;
-    color: #4285F4;
-    border: 2px solid #4285F4;
+    color: var(--primary-blue);
+    border: 2px solid var(--primary-blue);
     padding: 10px 24px;
     border-radius: 8px;
     font-weight: 600;
@@ -156,305 +161,341 @@ body {
 }
 
 .btn-secondary:hover {
-    background: #4285F4;
+    background: var(--primary-blue);
     color: white;
 }
 
 .btn-large {
     padding: 14px 32px;
     font-size: 16px;
-}
+} */
 
 /* Hero Section */
 .hero {
-    background: #FAFAFA;
-    padding: 140px 0 100px;
-    position: relative;
-    overflow: visible;
+  background: #fafafa;
+  padding: 180px 0 100px;
+  position: relative;
+  overflow: visible;
 }
 
 .hero .container {
-    position: relative;
+  position: relative;
 }
 
 .hero-content {
-    text-align: center;
-    max-width: 900px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 2;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 .hero h1 {
-    font-size: 64px;
-    font-weight: 800;
-    color: #1a1a1a;
-    margin-bottom: 30px;
-    line-height: 1.2;
-    letter-spacing: -1px;
-    position: relative;
-    display: inline-block;
-    padding: 30px 50px;
+  font-size: 64px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 30px;
+  line-height: 1.2;
+  letter-spacing: -1px;
+  position: relative;
+  display: inline-block;
+  padding: 30px 50px;
 }
 
 .hero h1::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border: 2px dashed;
-    border-radius: 30px;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px dashed;
+  border-radius: 30px;
 }
 
 .hero-subtitle {
-    font-size: 20px;
-    color: #666;
-    margin-bottom: 40px;
-    line-height: 1.6;
-    font-weight: 400;
+  font-size: 20px;
+  color: #666;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  font-weight: 400;
 }
 
 .hero-buttons {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-icon {
-    position: absolute;
-    top: 50%;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+  z-index: 1;
+  animation: float 3s ease infinite;
+}
+
+@keyframes float {
+  0% {
     right: 10%;
-    transform: translateY(-50%);
-    z-index: 1;
-    animation: float 3s ease-in-out infinite;
+  }
+  50% {
+    right: 11%;
+  }
+  100% {
+    right: 10%;
+  }
 }
 
 .btn-hero-primary {
-    background: linear-gradient(135deg, #667EEA 0%, #4285F4 100%);
-    color: white;
-    border: none;
-    padding: 16px 32px;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.3s;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    box-shadow: 0 4px 15px rgba(66, 133, 244, 0.3);
+  background: linear-gradient(135deg, #667eea 0%, var(--primary-blue) 100%);
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 15px rgba(66, 133, 244, 0.3);
 }
 
 .btn-hero-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(66, 134, 244, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(66, 134, 244, 0.4);
 }
 
 .btn-hero-secondary {
-    background: white;
-    color: #1a1a1a;
-    border: 2px solid #E5E5E5;
-    padding: 16px 32px;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.3s;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  background: white;
+  color: #1a1a1a;
+  border: 2px solid #e5e5e5;
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .btn-hero-secondary:hover {
-    border-color: #4285F4;
-    color: #4285F4;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-color: var(--primary-blue);
+  color: var(--primary-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Problem Statement */
 .problem-section {
-    padding: 100px 0;
-    background: #FAFAFA;
+  padding: 100px 0;
+  background: #fafafa;
 }
 
 .problem-section h2 {
-    text-align: center;
-    font-size: 48px;
-    font-weight: 800;
-    margin-bottom: 80px;
-    color: #1a1a1a;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 80px;
+  color: #1a1a1a;
 }
 
 .problems-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
 }
 
 .problem-list {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .problem-item {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .problem-icon {
-    flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 .problem-item p {
-    color: #1a1a1a;
-    font-size: 20px;
-    font-weight: 600;
-    margin: 0;
+  color: #1a1a1a;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Features section */
+.features-section {
+  padding: 100px;
+}
+
+.features-section h2 {
+  text-align: center;
+  color: #1a1a1a;
+  font-size: 48px;
+  padding: 40px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+}
+
+.card-container div {
+  background-color: var(--primary-blue);
+  padding: 150px;
+  text-align: center;
 }
 
 /* Footer */
 .footer {
-    background: #FAFAFA;
-    color: #666;
-    padding: 40px 0;
-    border-top: 1px solid #E5E5E5;
+  background: #fafafa;
+  color: #666;
+  padding: 40px 0;
+  border-top: 1px solid #e5e5e5;
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer-left {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .footer-left .logo {
-    color: #1a1a1a;
+  color: #1a1a1a;
 }
 
 .footer-left .logo span {
-    color: #1a1a1a;
+  color: #1a1a1a;
 }
 
 .footer-copyright {
-    font-size: 14px;
-    color: #999;
-    margin: 0;
+  font-size: 14px;
+  color: #999;
+  margin: 0;
 }
 
 .footer-links {
-    display: flex;
-    gap: 40px;
-    align-items: center;
+  display: flex;
+  gap: 40px;
+  align-items: center;
 }
 
 .footer-links a {
-    color: var(--primary-grey);
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 500;
-    transition: color 0.3s;
+  color: var(--primary-grey);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
 .footer-links a:hover {
-    color: #4285F4;
+  color: var(--primary-blue);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .header .container {
-        flex-wrap: wrap;
-        gap: 15px;
-    }
+  .header .container {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
 
-    .nav {
-        order: 3;
-        width: 100%;
-        /* margin-top: 15px; */
-        justify-content: center;
-        gap: 25px;
-    }
+  .nav {
+    order: 3;
+    width: 100%;
+    /* margin-top: 15px; */
+    justify-content: center;
+    gap: 25px;
+  }
 
-    .header-actions {
-        gap: 10px;
-    }
+  .header-actions {
+    gap: 10px;
+  }
 
-    .btn-signin {
-        padding: 6px 12px;
-        font-size: 14px;
-    }
+  .btn-signin {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
 
-    .btn-start {
-        padding: 8px 18px;
-        font-size: 13px
-    }
+  .btn-start {
+    padding: 8px 18px;
+    font-size: 13px;
+  }
 
-    .hero {
-        padding: 100px 0 60px;
-    }
+  .hero {
+    padding: 100px 0 60px;
+  }
 
-    .hero h1 {
-        font-size: 36px;
-        padding: 20px 30px;
-    }
+  .hero h1 {
+    font-size: 36px;
+    padding: 20px 30px;
+  }
 
-    .hero h1::before {
-        border-radius: 20px
-    }
+  .hero h1::before {
+    border-radius: 20px;
+  }
 
-    .hero-subtitle {
-        font-size: 16px
-    }
+  .hero-subtitle {
+    font-size: 16px;
+  }
 
-    .hero-subtitle br {
-        display: none;
-    }
+  .hero-subtitle br {
+    display: none;
+  }
 
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
 
-    .btn-hero-primary,
-    .btn-hero-secondary {
-        width: 100%;
-        max-width: 280px;
-        justify-content: center;
-    }
+  .btn-hero-primary,
+  .btn-hero-secondary {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
 
-    .hero-icon {
-        display: none;
-    }
+  .hero-icon {
+    display: none;
+  }
 
-    .footer-content {
-        flex-direction: column;
-        gap: 25px;
-        text-align: center;
-    }
+  .footer-content {
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+  }
 
-    .footer-left {
-        align-items: center;
-    }
+  .footer-left {
+    align-items: center;
+  }
 
-    .footer-links {
-        gap: 25px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+  .footer-links {
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-    .footer-links a {
-        font-size: 14px;
-    }
+  .footer-links a {
+    font-size: 14px;
+  }
 }
